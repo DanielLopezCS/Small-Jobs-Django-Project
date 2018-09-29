@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class = 'text-center'>Market!</h1>
+  {% for recentlyViewed in recentlyViewed.all%}
+
+    <!-- <h1 class = 'text-center'> job! {{ job.title }}</h1> -->
+
+    {% for job in recentlyViewed.jobsViewed.all %}
+    <h1 class = 'text-center'> {{ job }}</h1>
+
+    {% endfor %}
+  {% endfor %}
+
+{% endblock %}

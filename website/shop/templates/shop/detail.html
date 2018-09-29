@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-2">
+  <div class="container-2-box">
+    <h3 class='float-right'>{{ job.title }} </br>
+
+      <img class='float-right circle' src='https://banner2.kisspng.com/20180705/sai/kisspng-computer-icons-managed-services-buyer-5b3e935d93a2c1.9011000715308276136047.jpg'> </img></h3>
+
+
+  </div>
+  <div class="container-2-box">
+    <h3></h3>
+    <p>{{ job.description }}</p>
+    <p><i>posted by {{ job.user }}</i></p>
+
+    <div class="container-1">
+      <div class="box-1">
+        <h3>Location</h3>
+
+        <p style = 'color:blue;'>{{job.city}}</p>
+
+      </div>
+      <div class="box-2">
+        <h3 class>Pay</h3>
+        <p>Pay: <span style='color:green;'>${{job.payPerHour}}/hr</span></p>
+        <p>Estimated Hours: {{job.hours}}</p>
+
+      </div>
+      <div class="box-3">
+        <h3>Contact</h3>
+        <p>{{job.email}}</p>
+        <p>{{job.phone}}</p>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="container-2-box">
+    <!-- <h3>Box Six</h3>-->
+    <div class='container'></div>
+    <img class=" jobImage" src="{{job.image.url}}"> </img>
+
+  </div>
+</div>
+
+<h2 class='text-center' style = 'margin-top:12rem;'>Other Jobs By {{job.user}}</h2>
+<div class="container-fluid">
+
+  <div class="card-deck">
+
+
+    {% for otherjob in otherjobs %}
+    <div class="card">
+
+      <div class="card-body">
+
+        <h5 class="card-title text-center">{{otherjob.title}}</h5>
+        <p class="card-text text-center">{{otherjob.description}}
+        </br><span style = 'color:green'>${{otherjob.payPerHour}}/hr</span>
+      </br><span style = 'color:blue;'>{{otherjob.city}}</span>
+    </br><span>{{otherjob.hours}} hours</span>
+      </br>
+      <button type="submit" class="btn btn-success" onclick="window.location='{% url 'detail' otherjob.id %}';">View</button>
+
+      </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Created {{otherjob.created}}</small>
+      </div>
+    </div>
+
+    {% empty %}
+      <h2> <i>No Other Jobs Found</i></h2>
+
+
+    {% endfor %}
+
+
+
+  </div>
+
+
+</div>
+
+<!--
+<div  class = 'text-center'>
+    <h2>CALLING DETAIL</h2>
+    <h2>{{ job.title }}</h2>
+    <h2>{{ job.description }}</h2>
+    <h2>$ {{ job.hours }}</h2>
+    <h2>{{ job.payPerHour }}</h2>
+    <h2>{{ job.city }}</h2>
+    <div>
+      <img src = "{{job.image.url}}"></img>
+    </div>
+</div>
+
+-->
+
+
+
+
+
+
+{% endblock %}

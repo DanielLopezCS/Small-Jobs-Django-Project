@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+<br />
+<br />
+{% endif %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-wrap">
+        <h1 class='text-center'>Post A Job!</h1>
+        <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label> <b>Title </b></label>
+          <input type="text" class="form-control" name = 'title'>
+        </div>
+        <div class="form-group">
+          <label> <b>City </b></label>
+          <input type="text" class="form-control" name = 'city'>
+        </div>
+        <div class="form-group">
+          <label> <b>Hours</b> </label>
+          <input type = 'text' name = 'hours' class="form-control">
+        </div>
+        <div class="form-group">
+          <label> <b>Pay/hr</b> </label>
+          <input type = 'text' name = 'payPerHour'  class="form-control">
+        </div>
+        <div class="form-group">
+          <label> <b>E-Mail</b> </label>
+          <input type = 'text' name = 'email'  class="form-control">
+        </div>
+        <div class="form-group">
+          <label> Phone </label>
+          <input type = 'text' name = 'phone' class="form-control">
+        </div>
+        <div class="form-group">
+          <label>   <b>Image: </b></label>
+              <input type="file" name="image" />
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label><b>Description:</b></label>
+          <textarea class="form-control" rows="5" maxlength="250" name= 'description'></textarea>
+        </div>
+        <input type="submit" id="btn-login" class="btn btn-success btn-lg btn-block" value="Post Job!">
+        </form>
+        
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<h1>Create</h1>
+
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+{% csrf_token %}
+
+
+Title:
+<input type="text" name="title" />
+<br />
+<br />
+
+Description:
+<input type="textbox" name="description" />
+<br />
+<br />
+Hours:
+<input type="text" name="hours" />
+<br />
+<br />
+Pay Per Hour:
+<input type="text" name="payPerHour" />
+<br />
+<br />
+
+City:
+<input type="text" name="city" />
+<br />
+<br />
+
+Image:
+<input type="file" name="image" />
+<br />
+
+<br />
+<input class="btn btn-primary" type="submit" value="Add Job" />
+</form>
+-->
+
+{% endblock %}

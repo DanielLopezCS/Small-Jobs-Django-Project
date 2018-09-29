@@ -1,0 +1,27 @@
+/* USED FOR LOGIN AND SIGNUP PAGES*/
+#login {
+  padding-top: 50px
+}
+
+#login .form-wrap {
+  width: 30%;
+  margin: 0 auto;
+}
+
+#login h1 {
+  color: #1fa67b;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+#login .form-group {
+  margin-bottom: 25px;
+}
+
+#login .forget {
+  font-size: 13px;
+  text-align: center;
+  display: block;
+}

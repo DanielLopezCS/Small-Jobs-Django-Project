@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{%verbatim%}
+
+<!-- Cards -->
+
+<div class='container'>
+  <div class="alert alert-warning" id='warningText'>
+    <strong>Warning!</strong> Your City was not found. Please check your spelling.</div>
+  <div class='row'>
+    <div class='cards'>
+      <div class=" card-columns">
+
+        <div v-for="product in products">
+          <div class="card">
+            <img class="card-img-top" v-bind:src=product.image alt="Card image cap" style="height:8rem;">
+            <div class="card-body">
+
+              <h5 class="card-title text-center">{{ product.title }}</h5>
+              <p class="card-text text-center">
+                {{ product.description}}
+                </br>
+
+                <span style='color:#428bca;'>
+                  {{ product.city }}</span>
+                </br>
+                <span>{{ product.distance }} mi away</span>
+                </br>
+                {{ product.estimatedTime}} hrs</br>
+                <span style='color:green;'> ${{ product.pay}}/hr</span>
+
+              </p>
+              <div class="form-actions">
+
+                <a :href="'http://127.0.0.1:8000/shop/' + product.id "><button type="submit" class="btn btn-success">View</button> </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+<!-- Gradient -->
+<div class='container-fluid'>
+  <div class='header'>
+    <div class='section-features text-center'>
+      <h2> Thanks for using Small Jobs!</image>
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae laoreet mi. Phasellus lacus felis, fringilla vel mauris eu, elementum hendrerit nunc. Fusce lacinia ex ac quam vestibulum, non semper ex aliquam. Ut a facilisis turpis, sed pellentesque orci. Sed a semper felis. Vivamus ac lectus maximus, condimentum augue vel, viverra ante. Aliquam fringilla eu ex a aliquam. Ut urna massa, suscipit ut purus non, euismod euismod massa. Nullam congue diam in imperdiet dignissim.
+
+Donec aliquam lacus a mauris efficitur dapibus. Nunc convallis nisi vitae lacus viverra ultrices. Phasellus ac augue commodo, dictum augue et, convallis enim. Ut et lectus porta, fringilla ligula eget, tristique tellus. Quisque odio augue, tempor pellentesque commodo in, dapibus id mauris. Aliquam vehicula lorem ut mollis tincidunt. Donec condimentum arcu quis quam viverra ultrices. Aenean lorem tortor, finibus in orci maximus, elementum bibendum diam.
+
+Phasellus egestas elementum nisi, sit amet rhoncus orci condimentum eu. Etiam bibendum, justo vel dignissim dignissim, risus libero dictum libero, at scelerisque tellus neque placerat libero. Phasellus arcu dui, interdum nec efficitur sit amet, euismod ac est. Aenean varius ipsum sit amet dui lobortis, at sollicitudin mauris lobortis. Aliquam erat volutpat. Aenean tristique sollicitudin ligula, eget viverra sem lobortis luctus. Nunc suscipit velit in tortor sagittis, condimentum fringilla justo posuere.
+
+Proin imperdiet non sapien nec auctor. Duis et nulla ut urna euismod finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ac metus eu sapien posuere accumsan et eget dui. Nunc auctor massa vitae dolor volutpat rutrum. Quisque nec fringilla elit. Sed et enim sed leo varius eleifend in ac ante. Duis suscipit eget dui ac aliquet. Fusce ut sollicitudin odio.
+
+Fusce commodo enim sit amet magna dictum porta. Proin sed risus eu mi eleifend cursus. Suspendisse efficitur, felis efficitur interdum consectetur, mauris elit lacinia magna, et fringilla arcu nulla eget nunc. Vestibulum aliquet non dui vitae ultricies. Phasellus hendrerit viverra neque. Phasellus rhoncus orci vel metus dignissim laoreet porta non arcu. Quisque aliquam tortor vehicula dapibus commodo. Sed tincidunt ante vel dolor porttitor pellentesque. </p>
+    </div>
+  </div>
+</div>
+{% endverbatim %}
+
+{% endblock %}
