@@ -2,11 +2,14 @@
 A project I began in order to exercise my back-end django skills and incorporating new things I wanted to practice. Some things include: <br/>*Using Django's RESTFUL  API to connect the back-end framework(Django) and the front-end framework(vue.js) 
 <br/>*Responsive UI Design Using Bootstrap, Flexbox, and Media Queries 
 <br/>*Setting up a custom User Registration/Login template
+<br/>*Getting more used to the database structure such as using ForeignKeys and understanding migrations
 <br/>*First time using the Google Maps API
-<br/>* SOME FUNCTIONALITY *  
+<br/> <b>SOME FUNCTIONALITY <b>  
 <ul>  
-  <li>1</li>
-  <li>2</li>
+  <li>User Registration</li>
+  <li>Media Uploads</li>
+  <li>Job Creation by User</li>
+  <li>Job Detail with User info(listing other jobs by that user)</li>
 </ul>
 <br/>
 
