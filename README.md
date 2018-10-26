@@ -14,3 +14,17 @@ A project I began in order to exercise my back-end django skills and incorporati
 <br/>
 
 Learned a lot although I could have made the UI look better. I am expecting my next project to have a larger scope and will put more effort into the UI as I learn more about Django.
+
+Main Page:
+
+![Alt text](https://github.com/DanielLopezCS/Small-Jobs-Django-Project/blob/master/mainpage.png "Main Page")
+
+Sign Up Page:
+
+
+![Alt text](https://github.com/DanielLopezCS/Small-Jobs-Django-Project/blob/master/signup.png "Sign Up Page")
+
+Job Page:
+
+![Alt text](https://github.com/DanielLopezCS/Small-Jobs-Django-Project/blob/master/jobview.png "Job Page")
+
